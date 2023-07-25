@@ -7,9 +7,9 @@
 - 属性修饰符使用场景
 - 什么是循环引用？如何避免循环引用？
 - autoreleasepool的原理
-  tips：自动释放池的实质是在开始处调用了autoreleasePoolPush方法，而在结束时调用了autoreleasePoolPop方法。其实push方法的作用是向这个双向链表结构的当前autoreleasePoolPage中插入哨兵对象，pop方法的作用是将插入的哨兵对象后的所有自动释放对象进行release操作。
+- tips：自动释放池的实质是在开始处调用了autoreleasePoolPush方法，而在结束时调用了autoreleasePoolPop方法。其实push方法的作用是向这个双向链表结构的当前autoreleasePoolPage中插入哨兵对象，pop方法的作用是将插入的哨兵对象后的所有自动释放对象进行release操作。
 - iOS内存分布（代码区/常量区/全局静态区(又分为BSS和Data)/堆区/栈区）
-  tips：栈区由系统进行分配，通常用来存放函数参数、局部变量等数据。在实际开发中，指针变量本身存放在栈中，指向的对象数据会存放在堆中
+- tips：栈区由系统进行分配，通常用来存放函数参数、局部变量等数据。在实际开发中，指针变量本身存放在栈中，指向的对象数据会存放在堆中
 
 ### 1.2 Block相关
 
