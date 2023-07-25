@@ -2,19 +2,17 @@
 
 ## 1. 基础知识
 
-### 1.1 Objective-C 和 Swift
+### 1.1 属性关键字
 
-- 解释 Objective-C 和 Swift 之间的区别和优缺点。
-- 介绍 Objective-C 中的消息传递机制和 Swift 中的方法调用方式。
-- 熟悉 Objective-C 中的内存管理方式，如 ARC 和 MRC。
-- Swift 中的 Optionals 和如何处理可选值。
-
-### 1.2 内存管理
+- 属性修饰符使用场景
+- 什么是循环引用？如何避免循环引用？
+- autoreleasepool的原理
+  tips：自动释放池的实质是在开始处调用了autoreleasePoolPush方法，而在结束时调用了autoreleasePoolPop方法。其实push方法的作用是向这个双向链表结构的当前autoreleasePoolPage中插入哨兵对象，pop方法的作用是将插入的哨兵对象后的所有自动释放对象进行release操作。
 - iOS内存分布（代码区/常量区/全局静态区(又分为BSS和Data)/堆区/栈区）
   tips：栈区由系统进行分配，通常用来存放函数参数、局部变量等数据。在实际开发中，指针变量本身存放在栈中，指向的对象数据会存放在堆中
-- 介绍 iOS 中的内存管理原则。
-- 什么是循环引用？如何避免循环引用？
-- 使用 autoreleasepool 的目的是什么？在什么情况下使用它？
+
+### 1.2 Block相关
+
 
 ### 1.3 多线程和 GCD
 
